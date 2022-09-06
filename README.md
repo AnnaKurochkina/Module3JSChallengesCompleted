@@ -15,23 +15,6 @@ To give you a head start with this thinking and to get you to practice writing J
 2. We will review the challenge when the course starts.
 3. If you get stuck, thats okay. Reach out to a coach on Slack.
 
----
-
-## Challenge
-## :computer: Challenges 
-
-1. Write a function that takes a number and returns true if it is a positive number and false if it is a negative number
-   @@ -0,0 +1,49 @@
-# JS Challenges
-Congratulations you have completed the Javascript module :sunglasses:. 
-
-You have covered some of the core fundamentals of Javascript and also how to start thinking about breaking problems down programmatically. 
-
-To give you a head start with this thinking and to get you to practice writing Javascript we have some challenges below we would like you to complete. 
-
-**We would like this project to be pushed to GitHub.**
-
----
 
 ## Challenge
 
