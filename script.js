@@ -1,3 +1,6 @@
+/*A function that takes a number and returns true if it is a positive number, 
+false if it is a negative number, and logs a message "The number is 0" if the number is 0.*/
+
 const isNumberPositive = (number) => {
 
     if (number < 0) {
@@ -15,6 +18,10 @@ const isNumberPositive = (number) => {
    
 }
 
+
+
+//A function that takes a number and returns true if it is a positive number, false if it is a negative number.
+
 console.log(isNumberPositive(-1));
 console.log(isNumberPositive(10));
 console.log(isNumberPositive(0));
@@ -24,15 +31,15 @@ const isNumberPositive2 = (number) => number > 0;
 
 console.log(isNumberPositive2(-1));
 console.log(isNumberPositive2(10));
-console.log(isNumberPositive(0));
+console.log(isNumberPositive2(0));
 
 
 
-
+//A function that takes a number of days and converts it into an age.
 
 const convertDaysToAge = (days) => {
 
-    age = days / 365.25;
+    age = days / 365;
     console.log(Math.round(age));
 }
 
@@ -41,6 +48,7 @@ convertDaysToAge(6570);
 
 
 
+//A function that takes three numbers and returns the largest of the three numbers.
 
 const getLargestNumber = (num1, num2, num3) => {
 
@@ -64,6 +72,7 @@ getLargestNumber(6,2,3);
 
 
 
+//A function that takes an array of names and returns the last name from the array of names.
 
 const getLastName = (array) => {
 
@@ -80,6 +89,9 @@ getLastName(["Charlie", "Dezy"]);
 
 
 
+/* A function that takes an array of numbers and returns true if all of the numbers are positive.
+It should return false if there are one or more negative numbers in the array.
+I was not sure what to do with 0, so I desided to return false if there is any 0 in an array.*/
 
 const allNumbersPositive = (array) => {
 
