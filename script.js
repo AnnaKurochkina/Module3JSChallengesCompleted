@@ -20,11 +20,11 @@ const isNumberPositive = (number) => {
 
 
 
-//A function that takes a number and returns true if it is a positive number, false if it is a negative number.
-
 console.log(isNumberPositive(-1));
 console.log(isNumberPositive(10));
 console.log(isNumberPositive(0));
+
+//A function that takes a number and returns true if it is a positive number, false if it is a negative number or 0.
 
 const isNumberPositive2 = (number) => number > 0;
 
@@ -91,7 +91,7 @@ getLastName(["Charlie", "Dezy"]);
 
 /* A function that takes an array of numbers and returns true if all of the numbers are positive.
 It should return false if there are one or more negative numbers in the array.
-I was not sure what to do with 0, so I desided to return false if there is any 0 in an array.*/
+I was not sure what to do with 0, so I decided to return false if there is any 0 in an array.*/
 
 const allNumbersPositive = (array) => {
 
