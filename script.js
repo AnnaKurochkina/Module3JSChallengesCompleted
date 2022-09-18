@@ -1,22 +1,7 @@
-/*A function that takes a number and returns true if it is a positive number, 
-false if it is a negative number, and logs a message "The number is 0" if the number is 0.*/
+//Refactored function that takes a number and returns true if it is a positive number, false if it is a negative number.
 
-const isNumberPositive = (number) => {
+const isNumberPositive = (number) => number > 0;
 
-    if (number < 0) {
-
-        return false;
-
-    } else if (number > 0) {
-
-        return true;
-
-    } else {
-
-       return "The number is 0";
-    } 
-   
-}
 
 
 
@@ -24,88 +9,46 @@ console.log(isNumberPositive(-1));
 console.log(isNumberPositive(10));
 console.log(isNumberPositive(0));
 
-//A function that takes a number and returns true if it is a positive number, false if it is a negative number or 0.
-
-const isNumberPositive2 = (number) => number > 0;
 
 
-console.log(isNumberPositive2(-1));
-console.log(isNumberPositive2(10));
-console.log(isNumberPositive2(0));
+//Refactored function that takes a number of days and converts it into an age.
 
+const convertDaysToAge = (days) => console.log(Math.round(days / 365.25));
 
-
-//A function that takes a number of days and converts it into an age.
-
-const convertDaysToAge = (days) => {
-
-    age = days / 365;
-    console.log(Math.round(age));
-}
 
 convertDaysToAge(3650);
 convertDaysToAge(6570);
 
 
 
-//A function that takes three numbers and returns the largest of the three numbers.
+//Refactored function that takes three numbers and returns the largest of the three numbers.
 
-const getLargestNumber = (num1, num2, num3) => {
-
-        let largestNum; 
-
-        if (num1 > num2) {
-            largestNum = num1;
-        } else if (num1 < num2) {
-            largestNum = num2
-        };
-
-        if (num3 > largestNum) {
-            largestNum = num3;
-        }
-    console.log(largestNum);
-
-}
+const getLargestNumber = (...numbers) => console.log(Math.max(...numbers));
+    
 
 getLargestNumber(2 ,1, 4);
-getLargestNumber(6,2,3);
+getLargestNumber(6, 2, 3);
 
 
 
-//A function that takes an array of names and returns the last name from the array of names.
+//A function that takes an array of names and returns the last name from the array of names. Refactored my own solution.
 
-const getLastName = (array) => {
+const getLastName = (...names) => console.log(names[names.length - 1]);
 
-    if (array.length < 2) {
-        console.log(array[0]);
-    } else {
-        console.log(array[array.length - 1]);
-    }
-}
-
-getLastName(["Charlie","Rob", "Andy"]);
-getLastName(["Charlie"]);
-getLastName(["Charlie", "Dezy"]);
+getLastName("Charlie","Rob", "Andy");
+getLastName("Charlie");
+getLastName("Charlie", "Dezy");
 
 
 
 /* A function that takes an array of numbers and returns true if all of the numbers are positive.
-It should return false if there are one or more negative numbers in the array.
-I was not sure what to do with 0, so I decided to return false if there is any 0 in an array.*/
+It should return false if there are one or more negative numbers (or zero) in the array.
+Refactored my own solution to use built in Math function*/
 
-const allNumbersPositive = (array) => {
+const allNumbersPositive = (...numbers) => Math.min(...numbers) > 0;
 
-    for (let index = 0; index < array.length; index++) {
-       if (array[index] <= 0) {
-        return false;
-       } 
-    }
-      return true;
-}
-console.log(allNumbersPositive([2, 4, 5]));
-console.log(allNumbersPositive([-5, 4, 6]));
-
-console.log(allNumbersPositive([0, 4, 5]));
-console.log(allNumbersPositive([5, 4, -6, 3]));
-
+console.log(allNumbersPositive(2, 4, 5));
+console.log(allNumbersPositive(-5, 4, 6));
+console.log(allNumbersPositive(0, 4, 5));
+console.log(allNumbersPositive(5, 4, -6, 3));
 
